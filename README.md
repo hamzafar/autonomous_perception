@@ -22,7 +22,7 @@ Build a real-time autonomous perception pipeline using:
 4. CARLA ROS Bridge (installed)
 5. DDS communication (installed)
 
-- Setup Python/C++ environment
+- Setup Python/C++ environment (installed)
 - Connect CARLA sensors with ROS2
 
 ## Deliverable
