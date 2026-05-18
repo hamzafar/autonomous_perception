@@ -20,6 +20,8 @@ Build a real-time autonomous perception pipeline using:
 2. WSL2 DistroUbuntu 22.04 LTS (installed)
 3. ROS VersionROS2 Humble (installed)
 4. ros-bridge branch/tag for 0.9.15
+5. ros and carla bridge mismatch issue
+6. Use CARLA 0.9.13
 
 - Setup Python/C++ environment
 - Connect CARLA sensors with ROS2
