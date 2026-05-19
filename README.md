@@ -32,6 +32,7 @@ Build a real-time autonomous perception pipeline using:
 - ✅ WSL2 mirrored networking configuration
 - ✅ CARLA bridge stability with 0.9.15
 - ✅ ROS topics publishing
+- ✅ Ego vehicle, camera, LiDAR, radar, IMU/GNSS integration
 
 ## Deliverable
 - CARLA sensor data published to ROS2 topics
