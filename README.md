@@ -24,6 +24,7 @@ Build a real-time autonomous perception pipeline using:
 
 - Setup Python/C++ environment (installed)
 - Connect CARLA sensors with ROS2 (installed)
+- Validate CARLA sensors and ROS2 through Visualization
 
 ## Completed
 - ✅ Windows ↔ WSL2 networking
@@ -33,6 +34,8 @@ Build a real-time autonomous perception pipeline using:
 - ✅ CARLA bridge stability with 0.9.15
 - ✅ ROS topics publishing
 - ✅ Ego vehicle, camera, LiDAR, radar, IMU/GNSS integration
+- ✅ ROS2 camera subscriber and OpenCV visualization pipeline
+- ✅ End-to-end CARLA → ROS2 → OpenCV perception pipeline validation
 
 ## Deliverable
 - CARLA sensor data published to ROS2 topics
@@ -47,9 +50,6 @@ Build a real-time autonomous perception pipeline using:
 - Visualize detections in ROS2
 
 ## Completed
-- ✅ ROS2 camera subscriber and OpenCV visualization pipeline
-- ✅ Real-time CARLA RGB stream processing in Python ROS2 node
-- ✅ End-to-end CARLA → ROS2 → OpenCV perception pipeline validation
 
 ## Deliverable
 - Real-time object detection pipeline
