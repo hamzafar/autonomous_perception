@@ -46,6 +46,11 @@ Build a real-time autonomous perception pipeline using:
 - Run real-time detection on CARLA camera stream
 - Visualize detections in ROS2
 
+## Completed
+- ✅ ROS2 camera subscriber and OpenCV visualization pipeline
+- ✅ Real-time CARLA RGB stream processing in Python ROS2 node
+- ✅ End-to-end CARLA → ROS2 → OpenCV perception pipeline validation
+
 ## Deliverable
 - Real-time object detection pipeline
 
