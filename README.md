@@ -39,6 +39,9 @@ Build a real-time autonomous perception pipeline using:
 
 ## Deliverable
 - CARLA sensor data published to ROS2 topics
+  <p align="center">
+  <img src="assets/phase1_pipeline.gif" width="600"/>
+  </p>
 
 ---
 
