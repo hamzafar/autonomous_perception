@@ -24,7 +24,7 @@ Build a real-time autonomous perception pipeline using:
 
 - Setup Python/C++ environment (installed)
 - Connect CARLA sensors with ROS2 (installed)
-- Validate CARLA sensors and ROS2 through Visualization
+- Validate CARLA sensor streaming through ROS2 visualization (Configured)
 
 ## Completed
 - ✅ Windows ↔ WSL2 networking
