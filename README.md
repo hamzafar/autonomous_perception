@@ -48,11 +48,14 @@ Build a real-time autonomous perception pipeline using:
 # Phase 2 — Object Detection
 
 ## Tasks
+- Enable ego vehicle autopilot (configured)
 - Integrate pretrained YOLO model
 - Run real-time detection on CARLA camera stream
 - Visualize detections in ROS2
 
 ## Completed
+- ✅ Ego vehicle autopilot enabled through ROS2
+- ✅ Moving scene visualization through OpenCV pipeline
 
 ## Deliverable
 - Real-time object detection pipeline
