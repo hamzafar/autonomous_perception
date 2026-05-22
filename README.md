@@ -63,7 +63,9 @@ Build a real-time autonomous perception pipeline using:
 
 ## Deliverable
 - Real-time object detection pipeline
-
+  <p align="center">
+  <img src="assets/phase2_pipeline.gif" width="600"/>
+  </p>
 ---
 
 # Phase 3 — Modular ROS2 Pipeline
