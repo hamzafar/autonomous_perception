@@ -43,6 +43,10 @@ Build a real-time autonomous perception pipeline using:
   <img src="assets/phase1_pipeline.gif" width="600"/>
   </p>
 
+  <p align="center">
+  <b>Phase 1:</b> End-to-end CARLA → ROS2 → OpenCV perception pipeline validation with real-time RGB camera streaming on WSL2 Ubuntu 22.04.
+</p>
+
 ---
 
 # Phase 2 — Object Detection
