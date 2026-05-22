@@ -77,15 +77,20 @@ Build a real-time autonomous perception pipeline using:
 
 ---
 
-# Phase 3 — Modular ROS2 Pipeline
+# Phase 3 — ROS2 Modular Architecture
 
 ## Tasks
-- Create separate ROS2 nodes
-- Add launch/config files
-- Add basic C++ integration
+- Convert standalone scripts into ROS2 package
+- Learn ROS2 package structure
+- Create reusable ROS2 nodes
+- Learn ROS2 launch system
+- Learn topic remapping
+- Learn ROS2 parameters
+- Add config-driven architecture
+- Understand ROS2 node lifecycle/debugging
 
 ## Deliverable
-- Modular ROS2 perception stack
+- Modular ROS2 perception package with launch-based deployment
 
 ---
 
