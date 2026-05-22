@@ -63,9 +63,14 @@ Build a real-time autonomous perception pipeline using:
 
 ## Deliverable
 - Real-time object detection pipeline
-  <p align="center">
+<p align="center">
   <img src="assets/phase2_pipeline.gif" width="600"/>
-  </p>
+</p>
+
+<p align="center">
+  <b>Phase 2:</b> Real-time YOLOv8 object detection on CARLA RGB stream using ROS2, OpenCV, and Python perception pipeline.
+</p>
+
 ---
 
 # Phase 3 — Modular ROS2 Pipeline
