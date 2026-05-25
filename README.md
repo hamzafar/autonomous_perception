@@ -102,6 +102,14 @@ Build a real-time autonomous perception pipeline using:
 ## Deliverable
 - Modular ROS2 perception package with launch-based deployment
 
+<p align="center">
+  <img src="assets/ros_package_workflow2.png" width="800"/>
+</p>
+
+<p align="center">
+  ROS2 modular perception architecture using CARLA, ROS2 launch system, configurable nodes, YAML-based parameters, and YOLOv8 inference pipeline.
+</p>
+
 ---
 
 # Phase 4 — Model Compression Benchmarking
