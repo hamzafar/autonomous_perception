@@ -90,7 +90,7 @@ Build a real-time autonomous perception pipeline using:
 - Understand ROS2 node lifecycle/debugging (done)
 
 ## Completed
--Completed
+
 - ✅ Standalone perception scripts converted into modular ROS2 package architecture
 - ✅ ROS2 executable nodes configured using setup.py and colcon build system
 - ✅ Multi-node ROS2 launch system implemented using .launch.py architecture
