@@ -98,33 +98,56 @@ Build a real-time autonomous perception pipeline using:
 
 ---
 
-# Phase 4 — Performance Benchmarking
+# Phase 4 — Model Compression Benchmarking
+
+## Tasks
+- Baseline CPU vs GPU inference comparison
+- Apply:
+  - FP16 quantization
+  - INT8 quantization
+  - PTQ (Post-Training Quantization)
+  - QAT (optional exploration)
 
 ## Comparison
-- CPU vs GPU
-- FP32 vs FP16
-- TensorRT optimized inference
+- FP32 vs FP16 vs INT8
+- Accuracy vs latency tradeoffs
+- Memory footprint reduction
 
 ## Metrics
 - FPS
 - Latency
-- GPU/CPU usage
+- Memory usage
+- Accuracy impact
 
 ## Deliverable
-- Benchmark report and performance comparison
+- Model compression benchmark report
 
 ---
 
-# Phase 5 — Edge Inference
+# Phase 5 — Edge Inference Optimization
 
 ## Tasks
-- Convert model to ONNX/TensorRT
-- Apply quantization (FP16/INT8)
-- Run optimized inference on edge device
+- Convert:
+  - PyTorch → ONNX
+  - ONNX → TensorRT
+
+- Optimize TensorRT inference pipeline
+- Deploy on edge hardware
+- Benchmark real-time inference
+
+## Comparison
+- PyTorch vs ONNX vs TensorRT
+- CPU vs GPU inference
+- Desktop vs Edge device
+
+## Metrics
+- Real-time FPS
+- End-to-end latency
+- GPU utilization
+- Throughput stability
 
 ## Deliverable
-- Real-time optimized edge inference pipeline
-
+- Real-time optimized edge perception pipeline
 ---
 
 # Phase 6 — Semantic Segmentation
