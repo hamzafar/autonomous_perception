@@ -84,16 +84,20 @@ Build a real-time autonomous perception pipeline using:
 - Learn ROS2 package structure (done)
 - Create reusable ROS2 nodes (done)
 - Learn ROS2 launch system (done)
-- Learn topic remapping
+- Learn topic remapping (done)
 - Learn ROS2 parameters (done)
-- Add config-driven architecture
-- Understand ROS2 node lifecycle/debugging
+- Add config-driven architecture (done)
+- Understand ROS2 node lifecycle/debugging (done)
 
 ## Completed
-- ✅ Standalone perception scripts converted into modular ROS2 executable nodes
-- ✅ ROS2 workspace, package structure, setup.py, and colcon build system successfully configured
-- ✅ ROS2 multi-node launch system implemented
-- ✅ Reusable ROS2 perception nodes implemented
+-Completed
+- ✅ Standalone perception scripts converted into modular ROS2 package architecture
+- ✅ ROS2 executable nodes configured using setup.py and colcon build system
+- ✅ Multi-node ROS2 launch system implemented using .launch.py architecture
+- ✅ Configurable reusable ROS2 perception nodes implemented using ROS parameters
+- ✅ Topic remapping concepts implemented for modular node communication
+- ✅ YAML-based config-driven ROS2 parameter architecture implemented
+- ✅ ROS2 debugging and node/topic inspection workflow understood
 
 ## Deliverable
 - Modular ROS2 perception package with launch-based deployment
