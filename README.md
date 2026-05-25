@@ -80,12 +80,12 @@ Build a real-time autonomous perception pipeline using:
 # Phase 3 — ROS2 Modular Architecture
 
 ## Tasks
-- Convert standalone scripts into ROS2 package (completed)
-- Learn ROS2 package structure (completed)
-- Create reusable ROS2 nodes (completed)
-- Learn ROS2 launch system
+- Convert standalone scripts into ROS2 package (done)
+- Learn ROS2 package structure (done)
+- Create reusable ROS2 nodes (done)
+- Learn ROS2 launch system (done)
 - Learn topic remapping
-- Learn ROS2 parameters
+- Learn ROS2 parameters (done)
 - Add config-driven architecture
 - Understand ROS2 node lifecycle/debugging
 
