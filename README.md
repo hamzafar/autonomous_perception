@@ -111,57 +111,233 @@ Build a real-time autonomous perception pipeline using:
 </p>
 
 ---
+# Phase 4 — Real-Time Perception Optimization
 
-# Phase 4 — Model Compression Benchmarking
+## Objectives
 
-## Tasks
-- Baseline CPU vs GPU inference comparison
-- Apply:
-  - FP16 quantization
-  - INT8 quantization
-  - PTQ (Post-Training Quantization)
-  - QAT (optional exploration)
-
-## Comparison
-- FP32 vs FP16 vs INT8
-- Accuracy vs latency tradeoffs
-- Memory footprint reduction
-
-## Metrics
-- FPS
-- Latency
-- Memory usage
-- Accuracy impact
-
-## Deliverable
-- Model compression benchmark report
+Optimize the robotics perception pipeline for real-time inference and deployment efficiency.
 
 ---
 
-# Phase 5 — Edge Inference Optimization
+## 4.1 Baseline Benchmarking
 
-## Tasks
-- Convert:
-  - PyTorch → ONNX
-  - ONNX → TensorRT
+### Tasks
 
-- Optimize TensorRT inference pipeline
-- Deploy on edge hardware
-- Benchmark real-time inference
+- Benchmark YOLOv8 inference on CPU
+- Benchmark YOLOv8 inference on GPU
+- Establish FP32 baseline performance
 
-## Comparison
-- PyTorch vs ONNX vs TensorRT
-- CPU vs GPU inference
-- Desktop vs Edge device
+### Metrics
 
-## Metrics
+- FPS
+- Inference latency
+- End-to-end pipeline latency
+- CPU utilization
+- GPU utilization
+- RAM usage
+- VRAM usage
+
+### Deliverables
+
+- Baseline benchmark table
+- Performance comparison graphs
+
+---
+
+## 4.2 FP16 Optimization
+
+### Tasks
+
+- Enable FP16 mixed precision inference
+- Benchmark FP16 performance
+
+### Comparison
+
+- FP32 vs FP16
+
+### Focus Areas
+
+- FPS improvement
+- Latency reduction
+- VRAM reduction
+
+---
+
+## 4.3 INT8 Quantization
+
+### Tasks
+
+- Apply PTQ (Post-Training Quantization)
+- Benchmark INT8 inference performance
+- Evaluate memory footprint reduction
+
+### Comparison
+
+- FP32 vs FP16 vs INT8
+
+### Focus Areas
+
+- Edge deployment feasibility
+- Accuracy vs performance tradeoffs
+- Model size reduction
+
+---
+
+## 4.4 Pipeline Profiling
+
+### Profiling Targets
+
+- ROS2 callback latency
+- Image preprocessing time
+- YOLO inference time
+- Postprocessing time
+- OpenCV visualization overhead
+- Total end-to-end pipeline latency
+
+### Goal
+
+Identify real-time bottlenecks in the perception pipeline.
+
+---
+
+## 4.5 Benchmark Analysis
+
+### Metrics
+
+- FPS
+- Latency
+- Memory usage
+- Throughput stability
+- Accuracy impact
+
+### Deliverables
+
+- Optimization benchmark report
+- Performance graphs
+- Profiling analysis
+- Compression comparison tables
+
+---
+
+# Phase 5 — Edge Inference Readiness & Accelerated Deployment
+
+## Objectives
+
+Optimize the robotics perception pipeline for accelerated real-time inference and future edge deployment.
+
+---
+
+## 5.1 ONNX Conversion
+
+### Tasks
+
+- Convert YOLOv8 PyTorch model to ONNX
+- Validate ONNX inference pipeline
+- Benchmark ONNX Runtime performance
+
+### Comparison
+
+- PyTorch vs ONNX Runtime
+
+### Focus Areas
+
+- Runtime portability
+- Faster inference execution
+- Reduced deployment complexity
+
+---
+
+## 5.2 TensorRT Optimization
+
+### Tasks
+
+- Convert ONNX model to TensorRT engine
+- Optimize TensorRT FP16 inference
+- Explore TensorRT INT8 optimization (optional)
+
+### Comparison
+
+- PyTorch vs ONNX Runtime vs TensorRT
+
+### Focus Areas
+
+- GPU acceleration
+- Low-latency inference
+- Throughput optimization
+- Real-time perception performance
+
+---
+
+## 5.3 Real-Time Pipeline Optimization
+
+### Tasks
+
+- Optimize ROS2 perception nodes
+- Implement asynchronous inference pipeline
+- Reduce frame drops
+- Improve queue management
+- Optimize preprocessing and postprocessing stages
+- Reduce end-to-end pipeline latency
+
+### Goal
+
+Achieve stable real-time perception performance under continuous streaming workloads.
+
+---
+
+## 5.4 Edge Deployment Preparation
+
+### Target Platforms
+
+- NVIDIA Jetson Nano
+- NVIDIA Jetson Orin Nano
+- NVIDIA Xavier NX
+
+### Tasks
+
+- Prepare TensorRT-compatible deployment pipeline
+- Validate edge-compatible model formats
+- Benchmark optimized inference runtimes on desktop GPU
+- Structure pipeline for future Jetson deployment
+- Analyze deployment constraints for edge hardware
+
+### Goal
+
+Develop an edge-ready perception architecture for future embedded deployment.
+
+---
+
+## 5.5 Final Benchmarking & Analysis
+
+### Comparison
+
+| Backend | Precision | FPS | Latency | Memory Usage |
+|----------|-----------|-----|----------|---------------|
+| PyTorch | FP32 |  |  |  |
+| PyTorch | FP16 |  |  |  |
+| ONNX Runtime | FP32 |  |  |  |
+| TensorRT | FP16 |  |  |  |
+| TensorRT | INT8 |  |  |  |
+
+### Metrics
+
 - Real-time FPS
 - End-to-end latency
 - GPU utilization
 - Throughput stability
+- Memory footprint
+- Inference efficiency
 
-## Deliverable
-- Real-time optimized edge perception pipeline
+---
+
+## Deliverables
+
+- Accelerated real-time perception pipeline
+- TensorRT optimized inference workflow
+- ONNX/TensorRT benchmark report
+- Edge-ready deployment architecture
+- Real-time inference performance analysis
+
 ---
 
 # Phase 6 — Semantic Segmentation
