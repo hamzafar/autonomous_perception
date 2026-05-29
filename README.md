@@ -155,11 +155,9 @@ Monitor:
 
 ## Completed
 
-⬜ Hardware profiling framework
-
-⬜ CPU, RAM, GPU, VRAM benchmarking
-
-⬜ CARLA resource utilization analysis
+- ✅ Hardware profiling framework
+- ✅ CPU, RAM, GPU, VRAM benchmarking
+- ✅ CARLA resource utilization analysis
 
 ⬜ Dataset recording pipeline
 
