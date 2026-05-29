@@ -111,7 +111,72 @@ Build a real-time autonomous perception pipeline using:
 </p>
 
 ---
-# Phase 4 — Real-Time Perception Optimization
+# Phase 4 — Hardware Profiling & Offline Replay
+
+## Tasks
+
+### Hardware Profiling
+
+Measure resource utilization for:
+
+- CARLA only
+- CARLA + ROS Bridge
+- CARLA + Traffic
+- CARLA + YOLO
+
+Monitor:
+
+- CPU utilization
+- RAM utilization
+- GPU utilization
+- VRAM utilization
+- Temperature
+- Disk I/O
+
+### Dataset Recording
+
+- Record RGB camera stream
+- Save timestamped frames
+- Evaluate ROS2 bag recording
+- Evaluate frame-based recording
+
+### Offline Replay Pipeline
+
+- Implement image replay node
+- Publish saved frames as ROS2 image topics
+- Replay perception data without CARLA
+
+### Synchronous Capture Exploration
+
+- Investigate CARLA synchronous mode
+- Frame-by-frame simulation control
+- Deterministic data capture
+- Frame loss analysis
+
+## Completed
+
+⬜ Hardware profiling framework
+
+⬜ CPU, RAM, GPU, VRAM benchmarking
+
+⬜ CARLA resource utilization analysis
+
+⬜ Dataset recording pipeline
+
+⬜ Offline replay publisher node
+
+⬜ Replay-based perception testing
+
+⬜ Synchronous capture investigation
+
+⬜ Deterministic benchmarking workflow
+
+## Deliverable
+
+Offline replay perception pipeline with hardware profiling report
+---
+
+# Phase 5 — Real-Time Perception Optimization
 
 ## Objectives
 
@@ -119,7 +184,7 @@ Optimize the robotics perception pipeline for real-time inference and deployment
 
 ---
 
-## 4.1 Baseline Benchmarking
+## 5.1 Baseline Benchmarking
 
 ### Tasks
 
@@ -144,7 +209,7 @@ Optimize the robotics perception pipeline for real-time inference and deployment
 
 ---
 
-## 4.2 FP16 Optimization
+## 5.2 FP16 Optimization
 
 ### Tasks
 
@@ -163,7 +228,7 @@ Optimize the robotics perception pipeline for real-time inference and deployment
 
 ---
 
-## 4.3 INT8 Quantization
+## 5.3 INT8 Quantization
 
 ### Tasks
 
@@ -183,7 +248,7 @@ Optimize the robotics perception pipeline for real-time inference and deployment
 
 ---
 
-## 4.4 Pipeline Profiling
+## 5.4 Pipeline Profiling
 
 ### Profiling Targets
 
@@ -200,7 +265,7 @@ Identify real-time bottlenecks in the perception pipeline.
 
 ---
 
-## 4.5 Benchmark Analysis
+## 5.5 Benchmark Analysis
 
 ### Metrics
 
@@ -219,7 +284,7 @@ Identify real-time bottlenecks in the perception pipeline.
 
 ---
 
-# Phase 5 — Edge Inference Readiness & Accelerated Deployment
+# Phase 6 — Edge Inference Readiness & Accelerated Deployment
 
 ## Objectives
 
@@ -227,7 +292,7 @@ Optimize the robotics perception pipeline for accelerated real-time inference an
 
 ---
 
-## 5.1 ONNX Conversion
+## 6.1 ONNX Conversion
 
 ### Tasks
 
@@ -247,7 +312,7 @@ Optimize the robotics perception pipeline for accelerated real-time inference an
 
 ---
 
-## 5.2 TensorRT Optimization
+## 6.2 TensorRT Optimization
 
 ### Tasks
 
@@ -268,7 +333,7 @@ Optimize the robotics perception pipeline for accelerated real-time inference an
 
 ---
 
-## 5.3 Real-Time Pipeline Optimization
+## 6.3 Real-Time Pipeline Optimization
 
 ### Tasks
 
@@ -285,7 +350,7 @@ Achieve stable real-time perception performance under continuous streaming workl
 
 ---
 
-## 5.4 Edge Deployment Preparation
+## 6.4 Edge Deployment Preparation
 
 ### Target Platforms
 
@@ -307,7 +372,7 @@ Develop an edge-ready perception architecture for future embedded deployment.
 
 ---
 
-## 5.5 Final Benchmarking & Analysis
+## 6.5 Final Benchmarking & Analysis
 
 ### Comparison
 
@@ -340,7 +405,7 @@ Develop an edge-ready perception architecture for future embedded deployment.
 
 ---
 
-# Phase 6 — Semantic Segmentation
+# Phase 7 — Semantic Segmentation
 
 ## Tasks
 - Add drivable-area/terrain segmentation
@@ -351,7 +416,7 @@ Develop an edge-ready perception architecture for future embedded deployment.
 
 ---
 
-# Phase 7 — Sensor Fusion
+# Phase 8 — Sensor Fusion
 
 ## Tasks
 - Add LiDAR sensor in CARLA
@@ -363,7 +428,7 @@ Develop an edge-ready perception architecture for future embedded deployment.
 
 ---
 
-# Phase 8 — ViT-Based Detection Extension
+# Phase 9 — ViT-Based Detection Extension
 
 ## Tasks
 - Integrate transformer-based detector
