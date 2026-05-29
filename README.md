@@ -119,19 +119,19 @@ Build a real-time autonomous perception pipeline using:
 
 Measure resource utilization for:
 
-- CARLA only
-- CARLA + ROS Bridge
-- CARLA + Traffic
-- CARLA + YOLO
+- CARLA only (done)
+- CARLA + ROS Bridge (done)
+- CARLA + Traffic (done)
+- CARLA + YOLO (done)
 
 Monitor:
 
-- CPU utilization
-- RAM utilization
-- GPU utilization
-- VRAM utilization
-- Temperature
-- Disk I/O
+- CPU utilization (done)
+- RAM utilization (done)
+- GPU utilization (done)
+- VRAM utilization (done)
+- Temperature (done)
+- Disk I/O (done)
 
 ### Dataset Recording
 
