@@ -119,32 +119,51 @@ Build a real-time autonomous perception pipeline using:
 
 Measure resource utilization for:
 
-- CARLA only (done)
-- CARLA + ROS Bridge (done)
-- CARLA + Traffic (done)
-- CARLA + YOLO (done)
+- CARLA only (completed)
+- CARLA + ROS Bridge (completed)
+- CARLA + Traffic (completed)
+- CARLA + YOLO (completed)
 
 Monitor:
 
-- CPU utilization (done)
-- RAM utilization (done)
-- GPU utilization (done)
-- VRAM utilization (done)
-- Temperature (done)
-- Disk I/O (done)
+- CPU utilization (completed)
+- RAM utilization (completed)
+- GPU utilization (completed)
+- VRAM utilization (completed)
+- Temperature (completed)
+- Disk I/O (completed)
+
+### Sensor Throughput Analysis
+
+Evaluate perception throughput under different camera resolutions:
+
+- 800×600 RGB camera profiling (completed)
+- 640×480 RGB camera profiling (completed)
+- 320×240 RGB camera profiling (completed)
+- Camera FPS benchmarking (completed)
+- ROS Bridge throughput investigation (completed)
 
 ### Dataset Recording
 
-- Record RGB camera stream
-- Save timestamped frames
-- Evaluate ROS2 bag recording
-- Evaluate frame-based recording
+- Record RGB camera stream (completed)
+- Save timestamped frames (completed)
+- Evaluate ROS2 bag recording (completed)
+- Evaluate frame-based recording (completed)
+- Implement direct CARLA recorder (completed)
+- Queue-based asynchronous image saving (completed)
+- Fixed-size dataset generation (completed)
 
 ### Offline Replay Pipeline
 
-- Implement image replay node
+- Implement image replay viewer (completed)
+- Validate replay performance (completed)
+- Replay perception data without CARLA (completed)
+
+### Future Replay Publisher
+
 - Publish saved frames as ROS2 image topics
-- Replay perception data without CARLA
+- Replay-based perception benchmarking
+- Offline YOLO evaluation pipeline
 
 ### Synchronous Capture Exploration
 
@@ -158,8 +177,16 @@ Monitor:
 - ✅ Hardware profiling framework
 - ✅ CPU, RAM, GPU, VRAM benchmarking
 - ✅ CARLA resource utilization analysis
-
-⬜ Dataset recording pipeline
+- ✅ RGB camera throughput benchmarking
+- ✅ Resolution-based FPS profiling
+- ✅ Direct CARLA camera recording
+- ✅ Queue-based recording architecture
+- ✅ Timestamped dataset generation
+- ✅ Fixed-frame dataset generation
+- ✅ Offline image replay viewer
+- ✅ Replay validation
+- ✅ Zero-frame-loss recording pipeline
+- ✅ Low-memory recording workflow
 
 ⬜ Offline replay publisher node
 
@@ -169,9 +196,11 @@ Monitor:
 
 ⬜ Deterministic benchmarking workflow
 
+⬜ Multi-sensor dataset recording (LiDAR, Radar, IMU, GNSS)
+
 ## Deliverable
 
-Offline replay perception pipeline with hardware profiling report
+Offline perception dataset generation and replay pipeline with hardware profiling report.
 ---
 
 # Phase 5 — Real-Time Perception Optimization
