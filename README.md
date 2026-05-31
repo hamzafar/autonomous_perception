@@ -185,7 +185,21 @@ Evaluate perception throughput under different camera resolutions:
 
 ## Deliverable
 
-- Offline perception dataset generation and replay pipeline with hardware profiling report.
+### Online Profiling
+
+| Scenario | CPU | RAM | GPU |
+|-----------|------|------|------|
+| CARLA Only | TBD | TBD | TBD |
+| CARLA + ROS Bridge | TBD | TBD | TBD |
+| CARLA + Traffic | TBD | TBD | TBD |
+| CARLA + YOLO | TBD | TBD | TBD |
+
+### Offline Replay Profiling
+
+| Scenario | CPU | RAM | GPU |
+|-----------|------|------|------|
+| Replay Publisher + Viewer | ~30% | ~8 GB | N/A |
+| Replay Publisher + YOLO | ~30% | ~9.5 GB | ~30% |
   
 ---
 
