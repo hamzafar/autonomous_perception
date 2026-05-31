@@ -191,7 +191,7 @@ Evaluate perception throughput under different camera resolutions:
 |-----------|------|------|------|
 | CARLA Only | TBD | TBD | TBD |
 | CARLA + ROS Bridge | TBD | TBD | TBD |
-| CARLA + Traffic | TBD | TBD | TBD |
+| CARLA + Viewer | TBD | TBD | TBD |
 | CARLA + YOLO | TBD | TBD | TBD |
 
 ### Offline Replay Profiling
