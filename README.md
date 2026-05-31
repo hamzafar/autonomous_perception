@@ -189,10 +189,10 @@ Evaluate perception throughput under different camera resolutions:
 
 | Scenario | CPU | RAM | GPU |
 |-----------|------|------|------|
-| CARLA Only | TBD | TBD | TBD |
-| CARLA + ROS Bridge | TBD | TBD | TBD |
-| CARLA + Viewer | TBD | TBD | TBD |
-| CARLA + YOLO | TBD | TBD | TBD |
+| CARLA Only | 48% | ~8GB | 38% |
+| CARLA + ROS Bridge | 65% | ~9GB | 40% |
+| CARLA + Viewer | 70% | ~11GB | 40% |
+| CARLA + YOLO | 75% | ~13.5GB | 60% |
 
 ### Offline Replay Profiling
 
