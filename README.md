@@ -200,7 +200,8 @@ Evaluate perception throughput under different camera resolutions:
 
 ## Deliverable
 
-Offline perception dataset generation and replay pipeline with hardware profiling report.
+- Offline perception dataset generation and replay pipeline with hardware profiling report.
+  
 ---
 
 # Phase 5 — Real-Time Perception Optimization
