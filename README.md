@@ -161,16 +161,9 @@ Evaluate perception throughput under different camera resolutions:
 
 ### Future Replay Publisher
 
-- Publish saved frames as ROS2 image topics
-- Replay-based perception benchmarking
-- Offline YOLO evaluation pipeline
-
-### Synchronous Capture Exploration
-
-- Investigate CARLA synchronous mode
-- Frame-by-frame simulation control
-- Deterministic data capture
-- Frame loss analysis
+- Publish saved frames as ROS2 image topics (completed)
+- Replay-based perception benchmarking (completed)
+- Offline YOLO evaluation pipeline (completed)
 
 ## Completed
 
@@ -187,16 +180,8 @@ Evaluate perception throughput under different camera resolutions:
 - ✅ Replay validation
 - ✅ Zero-frame-loss recording pipeline
 - ✅ Low-memory recording workflow
-
-⬜ Offline replay publisher node
-
-⬜ Replay-based perception testing
-
-⬜ Synchronous capture investigation
-
-⬜ Deterministic benchmarking workflow
-
-⬜ Multi-sensor dataset recording (LiDAR, Radar, IMU, GNSS)
+- ✅ offline replay publisher node
+- ✅ Replay-based perception testing
 
 ## Deliverable
 
