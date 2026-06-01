@@ -202,13 +202,18 @@ Evaluate perception throughput under different camera resolutions:
 | Replay Publisher + YOLO | ~30% | ~9.5 GB | ~30% |
   
 ---
+# Phase 5 — Network Profiling and FPS Optimization
 
+---
 # Phase 5 — Real-Time Perception Optimization
+## Tasks
+- debug underlaying wsl ros2 data transfer system
+- improve subcriber node fps
 
-## Objectives
+## Completed
 
-Optimize the robotics perception pipeline for real-time inference and deployment efficiency.
-
+## Deliverable
+- Results of faster fps perception stack
 ---
 
 ## 5.1 Baseline Benchmarking
