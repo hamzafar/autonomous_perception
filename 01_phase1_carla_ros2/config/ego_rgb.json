@@ -1,0 +1,30 @@
+{
+  "objects": [
+    {
+      "type": "vehicle.tesla.model3",
+      "id": "ego_vehicle",
+      "role_name": "ego_vehicle",
+      "autopilot": true,
+
+      "sensors": [
+        {
+          "type": "sensor.camera.rgb",
+          "id": "rgb_front",
+
+          "spawn_point": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 2.4,
+            "roll": 0.0,
+            "pitch": 0.0,
+            "yaw": 0.0
+          },
+
+          "image_size_x": 640,
+          "image_size_y": 480,
+          "fov": 90
+        }
+      ]
+    }
+  ]
+}
