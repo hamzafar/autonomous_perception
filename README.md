@@ -77,28 +77,10 @@ Documentation will be published after project milestone release.
 
 ## Demonstrations
 
-### Phase 1 — CARLA + ROS2 Integration
-
-<p align="center">
-  <img src="assets/gifs/phase1_pipeline.gif" width="700"/>
-</p>
-
-<p align="center">
-  End-to-end CARLA → ROS2 → OpenCV perception pipeline validation.
-</p>
-
----
-
-### Phase 2 — Real-Time Object Detection
-
-<p align="center">
-  <img src="assets/gifs/phase2_pipeline.gif" width="700"/>
-</p>
-
-<p align="center">
-  Real-time object detection on CARLA driving scenes using YOLOv8 and ROS2.
-</p>
-
+| Phase 1 — CARLA + ROS2 Integration | Phase 2 — Real-Time Object Detection |
+|------------------------------------|--------------------------------------|
+| <img src="assets/gifs/phase1_pipeline.gif" width="450" height="150"/> | <img src="assets/gifs/phase2_pipeline.gif" width="450" height="150"/> |
+| End-to-end CARLA → ROS2 → OpenCV pipeline validation | Real-time object detection using YOLOv8 and ROS2 |
 ---
 
 
