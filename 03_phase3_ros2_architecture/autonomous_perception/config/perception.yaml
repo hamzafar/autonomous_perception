@@ -1,0 +1,7 @@
+view_camera:
+  ros__parameters:
+    car_camera: "/carla/ego_vehicle/rgb_front/image"
+
+yolo_detector:
+  ros__parameters:
+    model_path: "/home/hamza/ros2_cv_ws/models/yolov8n.pt"
