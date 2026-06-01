@@ -40,7 +40,7 @@ Build a real-time autonomous perception pipeline using:
 ## Deliverable
 - CARLA sensor data published to ROS2 topics
   <p align="center">
-  <img src="assets/phase1_pipeline.gif" width="600"/>
+  <img src="assets/gifs/phase1_pipeline.gif" width="600"/>
   </p>
 
   <p align="center">
@@ -68,7 +68,7 @@ Build a real-time autonomous perception pipeline using:
 ## Deliverable
 - Real-time object detection pipeline
 <p align="center">
-  <img src="assets/phase2_pipeline.gif" width="600"/>
+  <img src="assets/gifs/phase2_pipeline.gif" width="600"/>
 </p>
 
 <p align="center">
@@ -103,7 +103,7 @@ Build a real-time autonomous perception pipeline using:
 - Modular ROS2 perception package with launch-based deployment
 
 <p align="center">
-  <img src="assets/ros_package_workflow2.png" width="800"/>
+  <img src="assets/diagrams/ros_package_workflow2.png" width="800"/>
 </p>
 
 <p align="center">
