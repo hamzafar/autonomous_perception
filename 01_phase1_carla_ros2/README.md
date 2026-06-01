@@ -119,7 +119,27 @@ Successfully validated:
 - Windows 11
 
 ---
+## Engineering Challenges
 
+### CARLA ↔ ROS2 Communication
+
+**Challenge**
+
+ROS2 running inside WSL2 could not communicate reliably with the CARLA simulator running on Windows.
+
+**Resolution**
+
+- Verified network connectivity from WSL2
+- Validated CARLA accessibility from Windows
+- Confirmed ROS2 environment configuration
+- Isolated the issue to WSL2 ↔ Windows communication
+- Implemented WSL2 mirrored networking
+
+**Outcome**
+
+Reliable CARLA ↔ ROS2 communication was established for real-time sensor streaming.
+
+---
 ## Outcome
 
 Phase 1 established the foundational communication layer required for subsequent perception development. The validated pipeline provided the basis for integrating real-time object detection, modular ROS2 architectures, profiling workflows, and future autonomous perception capabilities.
