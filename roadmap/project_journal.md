@@ -205,7 +205,7 @@ Evaluate perception throughput under different camera resolutions:
 # Phase 5 — Network Profiling and FPS Optimization
 
 ---
-# Phase 5 — Real-Time Perception Optimization
+# Phase 6 — Real-Time Perception Optimization
 ## Tasks
 - debug underlaying wsl ros2 data transfer system
 - improve subcriber node fps
@@ -216,7 +216,7 @@ Evaluate perception throughput under different camera resolutions:
 - Results of faster fps perception stack
 ---
 
-## 5.1 Baseline Benchmarking
+## 6.1 Baseline Benchmarking
 
 ### Tasks
 
@@ -241,7 +241,7 @@ Evaluate perception throughput under different camera resolutions:
 
 ---
 
-## 5.2 FP16 Optimization
+## 6.2 FP16 Optimization
 
 ### Tasks
 
@@ -260,7 +260,7 @@ Evaluate perception throughput under different camera resolutions:
 
 ---
 
-## 5.3 INT8 Quantization
+## 6.3 INT8 Quantization
 
 ### Tasks
 
@@ -280,7 +280,7 @@ Evaluate perception throughput under different camera resolutions:
 
 ---
 
-## 5.4 Pipeline Profiling
+## 6.4 Pipeline Profiling
 
 ### Profiling Targets
 
@@ -297,7 +297,7 @@ Identify real-time bottlenecks in the perception pipeline.
 
 ---
 
-## 5.5 Benchmark Analysis
+## 6.5 Benchmark Analysis
 
 ### Metrics
 
@@ -316,7 +316,7 @@ Identify real-time bottlenecks in the perception pipeline.
 
 ---
 
-# Phase 6 — Edge Inference Readiness & Accelerated Deployment
+# Phase 7 — Edge Inference Readiness & Accelerated Deployment
 
 ## Objectives
 
@@ -324,7 +324,7 @@ Optimize the robotics perception pipeline for accelerated real-time inference an
 
 ---
 
-## 6.1 ONNX Conversion
+## 7.1 ONNX Conversion
 
 ### Tasks
 
@@ -344,7 +344,7 @@ Optimize the robotics perception pipeline for accelerated real-time inference an
 
 ---
 
-## 6.2 TensorRT Optimization
+## 7.2 TensorRT Optimization
 
 ### Tasks
 
@@ -365,7 +365,7 @@ Optimize the robotics perception pipeline for accelerated real-time inference an
 
 ---
 
-## 6.3 Real-Time Pipeline Optimization
+## 7.3 Real-Time Pipeline Optimization
 
 ### Tasks
 
@@ -382,7 +382,7 @@ Achieve stable real-time perception performance under continuous streaming workl
 
 ---
 
-## 6.4 Edge Deployment Preparation
+## 7.4 Edge Deployment Preparation
 
 ### Target Platforms
 
@@ -404,7 +404,7 @@ Develop an edge-ready perception architecture for future embedded deployment.
 
 ---
 
-## 6.5 Final Benchmarking & Analysis
+## 7.5 Final Benchmarking & Analysis
 
 ### Comparison
 
@@ -434,17 +434,6 @@ Develop an edge-ready perception architecture for future embedded deployment.
 - ONNX/TensorRT benchmark report
 - Edge-ready deployment architecture
 - Real-time inference performance analysis
-
----
-
-# Phase 7 — Semantic Segmentation
-
-## Tasks
-- Add drivable-area/terrain segmentation
-- Integrate segmentation into ROS2 pipeline
-
-## Deliverable
-- Detection + segmentation perception pipeline
 
 ---
 
