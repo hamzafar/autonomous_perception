@@ -202,7 +202,43 @@ Evaluate perception throughput under different camera resolutions:
 | Replay Publisher + YOLO | ~30% | ~9.5 GB | ~30% |
   
 ---
-# Phase 5 — Network Profiling and FPS Optimization
+## Phase 5 — ROS2 Transport Performance Investigation
+
+### Tasks
+
+- Validate DDS large message transport ✅
+- Benchmark ROS2 image streaming ✅
+- Measure publisher/subscriber throughput ✅
+- Evaluate OpenCV visualization impact ✅
+- Investigate single-stream limitations ✅
+- Investigate multi-stream scaling ✅
+- Evaluate DDS throughput limits (In Progress)
+- Investigate Best-Effort QoS
+- Investigate multi-threaded executors
+
+### Completed
+
+✅ DDS transport validated with 16 MB, 32 MB, and 64 MB payloads
+
+✅ ROS2 image transport benchmark created
+
+✅ OpenCV visualization isolated from transport testing
+
+✅ Subscriber processing overhead isolated
+
+✅ Aggregate throughput validated above 20 FPS
+
+✅ Multi-publisher scaling validated (up to 7 publishers @ 3 FPS)
+
+✅ Evidence that multiple low-rate streams outperform a single high-rate stream
+
+### Current Findings
+
+- DDS successfully handles large payload transport.
+- Large payloads introduce additional latency.
+- CPU is not the primary bottleneck.
+- Aggregate throughput scales beyond 20 FPS.
+- Bottleneck appears related to per-stream queueing/buffering rather than overall DDS bandwidth.
 
 ---
 # Phase 6 — Real-Time Perception Optimization
