@@ -117,71 +117,62 @@ Build a real-time autonomous perception pipeline using:
 
 ### Hardware Profiling
 
-Measure resource utilization for:
-
-- CARLA only (completed)
-- CARLA + ROS Bridge (completed)
-- CARLA + Traffic (completed)
-- CARLA + YOLO (completed)
-
-Monitor:
-
-- CPU utilization (completed)
-- RAM utilization (completed)
-- GPU utilization (completed)
-- VRAM utilization (completed)
-- Temperature (completed)
-- Disk I/O (completed)
+- CARLA resource utilization analysis (completed)
+- CPU, RAM, GPU, VRAM benchmarking (completed)
+- Traffic and YOLO workload profiling (completed)
 
 ### Sensor Throughput Analysis
 
-Evaluate perception throughput under different camera resolutions:
-
-- 800×600 RGB camera profiling (completed)
-- 640×480 RGB camera profiling (completed)
-- 320×240 RGB camera profiling (completed)
+- RGB camera resolution profiling (completed)
 - Camera FPS benchmarking (completed)
 - ROS Bridge throughput investigation (completed)
 
 ### Dataset Recording
 
-- Record RGB camera stream (completed)
-- Save timestamped frames (completed)
-- Evaluate ROS2 bag recording (completed)
-- Evaluate frame-based recording (completed)
-- Implement direct CARLA recorder (completed)
-- Queue-based asynchronous image saving (completed)
-- Fixed-size dataset generation (completed)
+- Direct CARLA image recording (completed)
+- Timestamped dataset generation (completed)
+- Fixed-frame dataset generation (completed)
+- Queue-based asynchronous recording (completed)
+- Deterministic synchronous recording (completed)
 
 ### Offline Replay Pipeline
 
-- Implement image replay viewer (completed)
-- Validate replay performance (completed)
-- Replay perception data without CARLA (completed)
+- Dataset replay viewer (completed)
+- Replay FPS validation (completed)
+- Replay without CARLA (completed)
 
-### Future Replay Publisher
+### Replay Publisher Pipeline
 
-- Publish saved frames as ROS2 image topics (completed)
+- ROS2 image replay publisher (completed)
 - Replay-based perception benchmarking (completed)
-- Offline YOLO evaluation pipeline (completed)
+- Offline YOLO evaluation (completed)
+
+### Dataset Utilities
+
+- Dataset resizing pipeline (completed)
+- Multi-resolution dataset generation (completed)
 
 ## Completed
 
 - ✅ Hardware profiling framework
 - ✅ CPU, RAM, GPU, VRAM benchmarking
-- ✅ CARLA resource utilization analysis
-- ✅ RGB camera throughput benchmarking
-- ✅ Resolution-based FPS profiling
-- ✅ Direct CARLA camera recording
+- ✅ Camera throughput profiling
+- ✅ Direct CARLA recorder
 - ✅ Queue-based recording architecture
+- ✅ Deterministic synchronous recorder
 - ✅ Timestamped dataset generation
 - ✅ Fixed-frame dataset generation
-- ✅ Offline image replay viewer
-- ✅ Replay validation
-- ✅ Zero-frame-loss recording pipeline
-- ✅ Low-memory recording workflow
-- ✅ offline replay publisher node
+- ✅ Offline replay viewer
+- ✅ Offline replay publisher
 - ✅ Replay-based perception testing
+- ✅ Offline YOLO evaluation
+- ✅ Dataset resizing utility
+- ✅ Tick-to-image synchronization validation
+- ✅ 100/100 synchronized capture validation
+- ✅ 900/900 synchronized capture validation
+- ✅ Zero-frame-loss recording pipeline
+- ✅ Traffic manager integration validation
+
 
 ## Deliverable
 
