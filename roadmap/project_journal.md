@@ -202,6 +202,8 @@ Evaluate perception throughput under different camera resolutions:
 | Replay Publisher + YOLO | ~30% | ~9.5 GB | ~30% |
   
 ---
+## Phase 5 — ROS2 Transport Performance Investigation
+
 ### Tasks
 
 - Validate DDS large message transport ✅
