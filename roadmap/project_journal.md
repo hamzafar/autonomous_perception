@@ -202,8 +202,6 @@ Evaluate perception throughput under different camera resolutions:
 | Replay Publisher + YOLO | ~30% | ~9.5 GB | ~30% |
   
 ---
-## Phase 5 — ROS2 Transport Performance Investigation
-
 ### Tasks
 
 - Validate DDS large message transport ✅
@@ -212,9 +210,11 @@ Evaluate perception throughput under different camera resolutions:
 - Evaluate OpenCV visualization impact ✅
 - Investigate single-stream limitations ✅
 - Investigate multi-stream scaling ✅
-- Evaluate DDS throughput limits (In Progress)
-- Investigate Best-Effort QoS
-- Investigate multi-threaded executors
+- Evaluate DDS throughput limits ✅
+- Investigate QoS configurations ✅
+- Investigate publisher-side multithreading ✅
+- Validate ROS2 image replay from recorded CARLA datasets ✅
+- Validate YOLO inference on ROS2 image streams ✅
 
 ### Completed
 
@@ -230,7 +230,15 @@ Evaluate perception throughput under different camera resolutions:
 
 ✅ Multi-publisher scaling validated (up to 7 publishers @ 3 FPS)
 
-✅ Evidence that multiple low-rate streams outperform a single high-rate stream
+✅ Multi-threaded publisher prototype validated
+
+✅ Offline CARLA dataset replay integrated with ROS2
+
+✅ End-to-end CARLA Replay → ROS2 → OpenCV pipeline validated
+
+✅ End-to-end CARLA Replay → ROS2 → YOLO pipeline validated
+
+✅ QoS experimentation completed
 
 ### Current Findings
 
@@ -238,7 +246,14 @@ Evaluate perception throughput under different camera resolutions:
 - Large payloads introduce additional latency.
 - CPU is not the primary bottleneck.
 - Aggregate throughput scales beyond 20 FPS.
+- Multiple low-rate publishers outperform a single high-rate publisher.
+- Publisher-side multithreading improves aggregate throughput.
+- ROS2 image transport is sufficient for real-time perception workloads on consumer hardware.
+- End-to-end perception pipeline remains functional at approximately 8–12 FPS under current hardware constraints.
 - Bottleneck appears related to per-stream queueing/buffering rather than overall DDS bandwidth.
+
+## Deliverable
+- Results of multi-threaded fps optimization
 
 ---
 # Phase 6 — Real-Time Perception Optimization
@@ -248,8 +263,8 @@ Evaluate perception throughput under different camera resolutions:
 
 ## Completed
 
-## Deliverable
-- Results of faster fps perception stack
+  ## Deliverable
+  - Results of faster fps perception stack
 ---
 
 ## 6.1 Baseline Benchmarking
