@@ -265,114 +265,109 @@ Build a real-time autonomous perception pipeline using:
 - Results of multi-threaded fps optimization
 
 ---
-# Phase 6 — Real-Time Perception Optimization
+# Phase 6 — Model Compression & Pipeline Analysis
 ## Tasks
-- debug underlaying wsl ros2 data transfer system
-- improve subcriber node fps
+
+### Model Compression Benchmarking
+
+- Benchmark YOLOv8m-seg FP32 baseline
+- Benchmark YOLOv8m-seg FP16 inference
+- Benchmark YOLOv8m-seg INT8 inference
+- Compare model resource utilization
+- Compare inference performance
+
+### Consistency Analysis
+
+- Use FP32 predictions as reference
+- Compare FP16 predictions against FP32
+- Compare INT8 predictions against FP32
+- Measure prediction consistency after quantization
+
+### Pipeline Profiling
+
+- Measure ROS2 callback time
+- Measure image preprocessing time
+- Measure YOLO inference time
+- Measure postprocessing time
+- Measure OpenCV visualization overhead
+- Measure total pipeline processing time
+
+### Benchmark Analysis
+
+- Evaluate compression trade-offs
+- Compare runtime performance
+- Compare resource utilization
+- Compare prediction consistency
+- Identify dominant perception pipeline stages
 
 ## Completed
 
-  ## Deliverable
-  - Results of faster fps perception stack
----
+## Current Findings
 
-## 6.1 Baseline Benchmarking
+### FP32 Baseline
 
-### Tasks
+To be evaluated.
 
-- Benchmark YOLOv8 inference on CPU
-- Benchmark YOLOv8 inference on GPU
-- Establish FP32 baseline performance
+### FP16 Quantization
 
-### Metrics
+To be evaluated.
 
-- FPS
-- Inference latency
-- End-to-end pipeline latency
-- CPU utilization
-- GPU utilization
-- RAM usage
-- VRAM usage
+### INT8 Quantization
 
-### Deliverables
+To be evaluated.
 
-- Baseline benchmark table
-- Performance comparison graphs
+### Consistency Analysis
 
----
+FP32 predictions will be used as the reference for evaluating FP16 and INT8 prediction consistency.
 
-## 6.2 FP16 Optimization
+Metrics:
 
-### Tasks
+- IoU
+- Precision
+- Recall
+- F1 Score
 
-- Enable FP16 mixed precision inference
-- Benchmark FP16 performance
+### Pipeline Profiling
 
-### Comparison
+Profiling will be used to understand where computation time is spent within the perception pipeline.
 
-- FP32 vs FP16
+Target components:
 
-### Focus Areas
+- ROS2 callback
+- Image preprocessing
+- YOLO inference
+- Postprocessing
+- OpenCV visualization
 
-- FPS improvement
-- Latency reduction
-- VRAM reduction
-
----
-
-## 6.3 INT8 Quantization
-
-### Tasks
-
-- Apply PTQ (Post-Training Quantization)
-- Benchmark INT8 inference performance
-- Evaluate memory footprint reduction
-
-### Comparison
-
-- FP32 vs FP16 vs INT8
-
-### Focus Areas
-
-- Edge deployment feasibility
-- Accuracy vs performance tradeoffs
-- Model size reduction
-
----
-
-## 6.4 Pipeline Profiling
-
-### Profiling Targets
-
-- ROS2 callback latency
-- Image preprocessing time
-- YOLO inference time
-- Postprocessing time
-- OpenCV visualization overhead
-- Total end-to-end pipeline latency
-
-### Goal
-
-Identify real-time bottlenecks in the perception pipeline.
-
----
-
-## 6.5 Benchmark Analysis
-
-### Metrics
-
-- FPS
-- Latency
-- Memory usage
-- Throughput stability
-- Accuracy impact
 
 ### Deliverables
 
-- Optimization benchmark report
-- Performance graphs
-- Profiling analysis
-- Compression comparison tables
+### Performance Comparison
+
+| Precision | FPS | Inference Latency | CPU | GPU | RAM | VRAM |
+|------------|------|------------------|------|------|------|------|
+| FP32 | | | | | | |
+| FP16 | | | | | | |
+| INT8 | | | | | | |
+
+### Consistency Comparison
+
+| Precision | IoU | Precision | Recall | F1 Score |
+|------------|------|-----------|--------|----------|
+| FP16 | | | | |
+| INT8 | | | | |
+
+### Pipeline Profiling
+
+| Component | Time (ms) |
+|------------|-----------|
+| ROS2 Callback | |
+| Image Preprocessing | |
+| YOLO Inference | |
+| Postprocessing | |
+| OpenCV Visualization | |
+| Total Pipeline Time | |
+
 
 ---
 
