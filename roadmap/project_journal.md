@@ -197,41 +197,45 @@ Build a real-time autonomous perception pipeline using:
 
 ### Tasks
 
-- Validate DDS large message transport ✅
-- Benchmark ROS2 image streaming ✅
-- Measure publisher/subscriber throughput ✅
-- Evaluate OpenCV visualization impact ✅
-- Investigate single-stream limitations ✅
-- Investigate multi-stream scaling ✅
-- Evaluate DDS throughput limits ✅
-- Investigate QoS configurations ✅
-- Investigate publisher-side multithreading ✅
-- Validate ROS2 image replay from recorded CARLA datasets ✅
-- Validate YOLO inference on ROS2 image streams ✅
+- Validate DDS large message transport (completed)
+- Benchmark ROS2 image streaming (completed)
+- Measure publisher/subscriber throughput (completed)
+- Evaluate OpenCV visualization impact (completed)
+- Investigate single-stream limitations (completed)
+- Investigate multi-stream scaling (completed)
+- Evaluate DDS throughput limits (completed)
+- Investigate QoS configurations (completed)
+- Investigate publisher-side multithreading (completed)
+- Validate ROS2 image replay from recorded CARLA datasets (completed)
+- Validate YOLOv8m-seg inference on ROS2 image streams (completed)
 
 ### Completed
 
-✅ DDS transport validated with 16 MB, 32 MB, and 64 MB payloads
+- ✅ DDS transport validated with 16 MB, 32 MB, and 64 MB payloads
 
-✅ ROS2 image transport benchmark created
+- ✅ ROS2 image transport benchmark created
 
-✅ OpenCV visualization isolated from transport testing
+- ✅ OpenCV visualization isolated from transport testing
 
-✅ Subscriber processing overhead isolated
+- ✅ Subscriber processing overhead isolated
 
-✅ Aggregate throughput validated above 20 FPS
+- ✅ Aggregate throughput validated above 20 FPS
 
-✅ Multi-publisher scaling validated (up to 7 publishers @ 3 FPS)
+- ✅ Multi-publisher scaling validated (up to 7 publishers @ 3 FPS)
 
-✅ Multi-threaded publisher prototype validated
+- ✅ Single high-rate publisher limitations identified
 
-✅ Offline CARLA dataset replay integrated with ROS2
+- ✅ Multi-threaded publisher prototype validated
 
-✅ End-to-end CARLA Replay → ROS2 → OpenCV pipeline validated
+- ✅ Multi-threaded DDS publishing increased throughput from ~3 FPS to ~15 FPS
 
-✅ End-to-end CARLA Replay → ROS2 → YOLO pipeline validated
+- ✅ Offline CARLA dataset replay integrated with ROS2
 
-✅ QoS experimentation completed
+- ✅ End-to-end CARLA Replay → ROS2 → OpenCV pipeline validated
+
+- ✅ End-to-end CARLA Replay → ROS2 → YOLOv8m-seg pipeline validated
+
+-✅ QoS experimentation completed
 
 ### Current Findings
 
@@ -240,10 +244,22 @@ Build a real-time autonomous perception pipeline using:
 - CPU is not the primary bottleneck.
 - Aggregate throughput scales beyond 20 FPS.
 - Multiple low-rate publishers outperform a single high-rate publisher.
-- Publisher-side multithreading improves aggregate throughput.
-- ROS2 image transport is sufficient for real-time perception workloads on consumer hardware.
-- End-to-end perception pipeline remains functional at approximately 8–12 FPS under current hardware constraints.
-- Bottleneck appears related to per-stream queueing/buffering rather than overall DDS bandwidth.
+- Publisher-side multithreading improves aggregate throughput by approximately 5×.
+- Single publisher throughput was limited to approximately 3 FPS.
+- Multi-threaded DDS publishing achieved approximately 15 FPS aggregate throughput.
+- ROS2 image transport is suitable for real-time perception workloads on consumer hardware.
+- End-to-end replay → ROS2 → YOLOv8m-seg perception remained stable at approximately 8–12 FPS.
+- Bottleneck appears related to per-stream queueing and buffering rather than overall DDS bandwidth.
+- Current limitations appear primarily hardware-related (RAM, VRAM, and inference workload) rather than DDS transport stability.
+
+### Key Benchmark Results
+
+| Configuration | Throughput |
+|---------------|------------|
+| Single Publisher | ~3 FPS |
+| Multi-Thread DDS Publisher | ~15 FPS |
+| Improvement | ~5× |
+
 
 ## Deliverable
 - Results of multi-threaded fps optimization
