@@ -251,6 +251,7 @@ Build a real-time autonomous perception pipeline using:
 - End-to-end replay → ROS2 → YOLOv8m-seg perception remained stable at approximately 8–12 FPS.
 - Bottleneck appears related to per-stream queueing and buffering rather than overall DDS bandwidth.
 - Current limitations appear primarily hardware-related (RAM, VRAM, and inference workload) rather than DDS transport stability.
+- changing wsl ntwork mode from Mirrored to NAT also contributed in reducing memory ~6GB and overall ~5fps gain
 
 ### Key Benchmark Results
 
@@ -265,22 +266,34 @@ Build a real-time autonomous perception pipeline using:
 - Results of multi-threaded fps optimization
 
 ---
-# Phase 6 — Model Compression & Pipeline Analysis
+# Phase 6 — Model Compression & Inference Optimization
+
 ## Tasks
 
-### Model Compression Benchmarking
+### Baseline Benchmarking
 
-- Benchmark YOLOv8m-seg FP32 baseline
-- Benchmark YOLOv8m-seg FP16 inference
-- Benchmark YOLOv8m-seg INT8 inference
-- Compare model resource utilization
-- Compare inference performance
+- Benchmark YOLOv8m-seg PyTorch FP32
+- Measure baseline perception performance
+- Measure baseline resource utilization
+
+### Model Compression & Acceleration
+
+- Benchmark PyTorch FP16 inference
+- Export YOLOv8m-seg to ONNX (completed)
+- Benchmark ONNX Runtime GPU inference
+- Export TensorRT FP16 engine (completed)
+- Benchmark TensorRT FP16 inference
+- Export TensorRT INT8 engine (completed)
+- Benchmark TensorRT INT8 inference
+- Compare model size reduction
+- Compare runtime performance improvements
 
 ### Consistency Analysis
 
 - Use FP32 predictions as reference
 - Compare FP16 predictions against FP32
-- Compare INT8 predictions against FP32
+- Compare TensorRT FP16 predictions against FP32
+- Compare TensorRT INT8 predictions against FP32
 - Measure prediction consistency after quantization
 
 ### Pipeline Profiling
@@ -294,50 +307,118 @@ Build a real-time autonomous perception pipeline using:
 
 ### Benchmark Analysis
 
+- Compare FP32, FP16, ONNX, TensorRT FP16, and TensorRT INT8
 - Evaluate compression trade-offs
-- Compare runtime performance
+- Evaluate acceleration trade-offs
 - Compare resource utilization
 - Compare prediction consistency
-- Identify dominant perception pipeline stages
+- Identify dominant perception pipeline bottlenecks
+
+---
 
 ## Completed
 
+- PyTorch FP32 benchmarking 
+- PyTorch FP16 benchmarking 
+- ✅ ONNX export 
+- ✅ ONNX Runtime GPU configuration
+- ONNX Runtime GPU benchmarking 
+- ✅ TensorRT installation and configuration 
+- ✅ TensorRT FP16 engine export 
+- TensorRT FP16 benchmarking 
+- ✅ TensorRT INT8 calibration dataset creation
+- ✅ TensorRT INT8 engine export 
+- TensorRT INT8 benchmarking 
+
+---
+
 ## Current Findings
 
-### FP32 Baseline
+### PyTorch FP32 Baseline
 
-To be evaluated.
+Steady-state performance:
 
-### FP16 Quantization
+- Min FPS: 10.14
+- Avg FPS: 14.29
+- Max FPS: 17.69
 
-To be evaluated.
+### PyTorch FP16
 
-### INT8 Quantization
+- Improved throughput over FP32
+- Reduced precision without noticeable deployment issues
 
-To be evaluated.
+### ONNX Runtime GPU
+
+- Successfully deployed using ONNX Runtime GPU
+- Required manual CUDA/cuDNN configuration under WSL2
+
+### ONNX Runtime INT8
+
+- Dynamic INT8 quantization generated successfully
+- GPU execution failed due to unsupported ConvInteger operators
+- ONNX Runtime GPU was not suitable for YOLOv8-seg INT8 deployment
+
+### TensorRT FP16
+
+Steady-state performance:
+
+- Min FPS: 13.89
+- Avg FPS: 17.12
+- Max FPS: 23.10
+
+Findings:
+
+- ~20% average FPS improvement over PyTorch FP32
+- Significant reduction in inference overhead
+
+### TensorRT INT8
+
+Steady-state performance:
+
+- Min FPS: 13.60
+- Avg FPS: 18.42
+- Max FPS: 24.74
+
+Findings:
+
+- ~29% average FPS improvement over PyTorch FP32
+- ~8% average FPS improvement over TensorRT FP16
+- INT8 gains were smaller than expected, suggesting inference may no longer be the dominant bottleneck
+
+### Calibration Dataset
+
+- Created calibration dataset from CARLA replay recordings
+- Randomly sampled 500 representative images
+- Successfully used for TensorRT INT8 engine generation
 
 ### Consistency Analysis
 
-FP32 predictions will be used as the reference for evaluating FP16 and INT8 prediction consistency.
+Pending.
 
-Metrics:
+Planned Metrics:
 
 - IoU
 - Precision
 - Recall
 - F1 Score
+- Detection count difference
+- Confidence score difference
 
 ### Pipeline Profiling
 
-Profiling will be used to understand where computation time is spent within the perception pipeline.
+Pending.
 
-Target components:
+Motivation:
 
-- ROS2 callback
+TensorRT INT8 produced only a modest improvement over TensorRT FP16, suggesting additional bottlenecks may exist in:
+
+- ROS2 callbacks
 - Image preprocessing
-- YOLO inference
-- Postprocessing
+- Segmentation postprocessing
 - OpenCV visualization
+- End-to-end pipeline execution
+
+Profiling will be used to identify remaining performance bottlenecks.
 
 
 ### Deliverables
@@ -371,7 +452,7 @@ Target components:
 
 ---
 
-# Phase 7 — Edge Inference Readiness & Accelerated Deployment
+# Phase 7 — Edge Inference Readiness 
 
 ## Objectives
 
