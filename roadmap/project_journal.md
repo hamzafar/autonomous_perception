@@ -569,140 +569,296 @@ Improvement:
 
 ---
 
-# Phase 7 — Edge Inference Readiness 
+# Phase 7 — Sensor Fusion & 3D Perception Foundations
 
 ## Objectives
 
-Optimize the robotics perception pipeline for accelerated real-time inference and future edge deployment.
+Extend the perception stack beyond monocular vision by integrating LiDAR data and basic sensor fusion techniques.
 
----
 
-## 7.1 ONNX Conversion
+## 7.1 LiDAR Integration
 
 ### Tasks
 
-- Convert YOLOv8 PyTorch model to ONNX
-- Validate ONNX inference pipeline
-- Benchmark ONNX Runtime performance
-
-### Comparison
-
-- PyTorch vs ONNX Runtime
+- Add LiDAR sensor to CARLA vehicle
+- Publish LiDAR point clouds through ROS2
+- Visualize point cloud data
+- Validate camera-LiDAR synchronization
 
 ### Focus Areas
 
-- Runtime portability
-- Faster inference execution
-- Reduced deployment complexity
+- Point cloud processing
+- ROS2 sensor integration
+- Multi-sensor synchronization
 
----
 
-## 7.2 TensorRT Optimization
-
-### Tasks
-
-- Convert ONNX model to TensorRT engine
-- Optimize TensorRT FP16 inference
-- Explore TensorRT INT8 optimization (optional)
-
-### Comparison
-
-- PyTorch vs ONNX Runtime vs TensorRT
-
-### Focus Areas
-
-- GPU acceleration
-- Low-latency inference
-- Throughput optimization
-- Real-time perception performance
-
----
-
-## 7.3 Real-Time Pipeline Optimization
+## 7.2 Camera–LiDAR Calibration
 
 ### Tasks
 
-- Optimize ROS2 perception nodes
-- Implement asynchronous inference pipeline
-- Reduce frame drops
-- Improve queue management
-- Optimize preprocessing and postprocessing stages
-- Reduce end-to-end pipeline latency
+- Extract camera intrinsic parameters
+- Extract LiDAR extrinsic parameters
+- Transform LiDAR points into camera coordinates
+- Project LiDAR points onto image plane
 
 ### Goal
 
-Achieve stable real-time perception performance under continuous streaming workloads.
+Create a unified camera-LiDAR representation.
+
+
+## 7.3 2D–3D Association
+
+### Tasks
+
+- Run YOLOv8 perception pipeline
+- Associate LiDAR points with detected objects
+- Filter object-specific point clusters
+- Estimate object distance
+
+### Outputs
+
+- Object Class
+- Bounding Box
+- Estimated Distance
+
+### Example
+
+Car: 18.4 m
+
+Truck: 27.1 m
+
+Pedestrian: 12.3 m
+
+
+## 7.4 Sensor Fusion Pipeline
+
+### Tasks
+
+- Fuse camera detections with LiDAR measurements
+- Generate distance-aware detections
+- Evaluate fusion robustness
+- Analyze fusion performance
+
+### Focus Areas
+
+- Multi-modal perception
+- Detection enhancement
+- Scene understanding
+
+
+## 7.5 3D Perception Foundations
+
+### Tasks
+
+- Generate Bird's-Eye View representation
+- Visualize projected point clouds
+- Estimate object positions
+- Build spatial awareness pipeline
+
+### Goal
+
+Transition from 2D perception toward 3D scene understanding.
+
+
+## 7.6 Benchmarking & Analysis
+
+### Comparison
+
+| Pipeline | Detection | Distance Estimation | Spatial Awareness |
+|-----------|-----------|-----------|-----------|
+| Camera Only | ✓ | ✗ | Limited |
+| Camera + LiDAR | ✓ | ✓ | Improved |
+
+### Metrics
+
+- Distance estimation accuracy
+- Sensor synchronization stability
+- Fusion processing latency
+- Perception throughput
+
+
+## Deliverables
+
+- ROS2 LiDAR integration
+- Camera-LiDAR calibration pipeline
+- Distance-aware object detection
+- Sensor fusion perception pipeline
+- Basic 3D perception framework
+- Fusion benchmarking report
+- Multi-modal perception demonstration
+
+
+## Outcome
+
+Transition from camera-only perception toward multi-modal robotics perception.
+---
+
+# Phase 8 — Multi-Camera Perception
+
+## Objectives
+
+Expand perception coverage using multiple synchronized cameras.
+
+
+## Scope
+
+### Camera Configuration
+
+- Front camera
+- Rear camera
+- Left camera
+- Right camera
+
+### Tasks
+
+- Multi-camera ROS2 integration
+- Camera synchronization
+- Multi-stream visualization
+- Cross-camera object tracking
+- Overlapping field-of-view analysis
+- Unified perception visualization
+
+### Focus Areas
+
+- 360° scene awareness
+- Multi-camera architecture
+- Perception scalability
+- Sensor synchronization
+
+
+## Deliverables
+
+- Multi-camera ROS2 pipeline
+- 360° perception visualization
+- Multi-camera benchmarking report
+- Multi-camera perception demonstration
+
+
+## Outcome
+
+Expand perception coverage from a single viewpoint to full-surround awareness.
+
+---
+# Phase 9 — Advanced Multi-Modal Perception
+
+## Objectives
+
+Combine camera, LiDAR, and multi-camera perception into a unified perception system.
+
+
+## Scope
+
+### Tasks
+
+- Multi-camera and LiDAR synchronization
+- Multi-modal data association
+- Bird's-Eye View generation
+- Unified world representation
+- Object localization in world coordinates
+- Scene-level perception analysis
+
+### Focus Areas
+
+- Advanced sensor fusion
+- 3D scene understanding
+- Spatial reasoning
+- Autonomous perception architecture
+
+
+## Deliverables
+
+- Multi-camera + LiDAR fusion pipeline
+- Bird's-Eye View visualization
+- Unified perception framework
+- Multi-modal benchmarking report
+
+
+## Outcome
+
+Build a complete multi-modal perception stack resembling modern autonomous systems.
 
 ---
 
-## 7.4 Edge Deployment Preparation
+# Phase 10 — Edge Inference Readiness & Deployment
 
-### Target Platforms
+## Objectives
+
+Deploy the optimized perception stack on embedded edge hardware.
+
+
+## Target Platforms
 
 - NVIDIA Jetson Nano
+- NVIDIA Jetson Xavier NX
 - NVIDIA Jetson Orin Nano
-- NVIDIA Xavier NX
+
+
+## 10.1 Deployment Preparation
 
 ### Tasks
 
-- Prepare TensorRT-compatible deployment pipeline
-- Validate edge-compatible model formats
-- Benchmark optimized inference runtimes on desktop GPU
-- Structure pipeline for future Jetson deployment
-- Analyze deployment constraints for edge hardware
+- Containerize perception pipeline
+- Prepare deployment scripts
+- Package ROS2 perception nodes
+- Validate TensorRT deployment workflow
 
-### Goal
 
-Develop an edge-ready perception architecture for future embedded deployment.
+## 10.2 Edge Optimization
 
----
+### Tasks
 
-## 7.5 Final Benchmarking & Analysis
+- Optimize memory usage
+- Optimize power consumption
+- Tune TensorRT inference settings
+- Analyze thermal behavior
+- Evaluate deployment constraints
+
+
+## 10.3 Edge Benchmarking
 
 ### Comparison
 
-| Backend | Precision | FPS | Latency | Memory Usage |
-|----------|-----------|-----|----------|---------------|
-| PyTorch | FP32 |  |  |  |
-| PyTorch | FP16 |  |  |  |
-| ONNX Runtime | FP32 |  |  |  |
-| TensorRT | FP16 |  |  |  |
-| TensorRT | INT8 |  |  |  |
+| Platform | FPS | Latency | GPU Utilization | Memory Usage |
+|-----------|-----|----------|----------------|--------------|
+| Desktop GPU | | | | |
+| Jetson Nano | | | | |
+| Xavier NX | | | | |
+| Orin Nano | | | | |
 
 ### Metrics
 
 - Real-time FPS
 - End-to-end latency
-- GPU utilization
-- Throughput stability
 - Memory footprint
-- Inference efficiency
+- Power efficiency
+- Thermal stability
 
----
+
+## 10.4 Deployment Validation
+
+### Tasks
+
+- Continuous perception testing
+- Long-duration stability testing
+- Resource monitoring
+- Failure analysis
+
 
 ## Deliverables
 
-- Accelerated real-time perception pipeline
-- TensorRT optimized inference workflow
-- ONNX/TensorRT benchmark report
-- Edge-ready deployment architecture
-- Real-time inference performance analysis
+- Edge deployment workflow
+- TensorRT deployment package
+- Containerized perception stack
+- Edge benchmarking report
+- Embedded deployment guide
+
+
+## Outcome
+
+Deploy a robotics perception system on real edge hardware with validated real-time performance.
 
 ---
-
-# Phase 8 — Sensor Fusion
-
-## Tasks
-- Add LiDAR sensor in CARLA
-- Fuse RGB camera + LiDAR information
-- Estimate object distance and scene understanding
-
-## Deliverable
-- Basic camera + LiDAR fusion pipeline
-
----
-
-# Phase 9 — ViT-Based Detection Extension
+# Phase 11 — ViT-Based Detection Extension
 
 ## Tasks
 - Integrate transformer-based detector
