@@ -266,69 +266,105 @@ Build a real-time autonomous perception pipeline using:
 - Results of multi-threaded fps optimization
 
 ---
-# Phase 6 — Model Compression & Inference Optimization
+# Phase 6 — Model Compression & Perception Optimization
 
 ## Tasks
 
 ### Baseline Benchmarking
 
-- Benchmark YOLOv8m-seg PyTorch FP32
-- Measure baseline perception performance
-- Measure baseline resource utilization
+* Benchmark YOLOv8m-seg PyTorch FP32
+* Measure baseline perception performance
+* Measure baseline resource utilization
 
 ### Model Compression & Acceleration
 
-- Benchmark PyTorch FP16 inference
-- Export YOLOv8m-seg to ONNX (completed)
-- Benchmark ONNX Runtime GPU inference
-- Export TensorRT FP16 engine (completed)
-- Benchmark TensorRT FP16 inference
-- Export TensorRT INT8 engine (completed)
-- Benchmark TensorRT INT8 inference
-- Compare model size reduction
-- Compare runtime performance improvements
+* Benchmark PyTorch FP16 inference
+* Export YOLOv8m-seg to ONNX (completed)
+* Benchmark ONNX Runtime GPU inference
+* Export TensorRT FP16 engine (completed)
+* Benchmark TensorRT FP16 inference
+* Export TensorRT INT8 engine (completed)
+* Benchmark TensorRT INT8 inference (completed)
+* Compare runtime performance improvements (completed)
+* Compare resource utilization (completed)
 
 ### Consistency Analysis
 
-- Use FP32 predictions as reference
-- Compare FP16 predictions against FP32
-- Compare TensorRT FP16 predictions against FP32
-- Compare TensorRT INT8 predictions against FP32
-- Measure prediction consistency after quantization
+* Use FP32 predictions as reference (completed)
+* Compare TensorRT FP16 predictions against FP32 (completed)
+* Compare TensorRT INT8 predictions against FP32 (completed)
+* Measure detection agreement (completed)
+* Measure class agreement (completed)
+* Measure localization consistency (completed)
 
 ### Pipeline Profiling
 
-- Measure ROS2 callback time
-- Measure image preprocessing time
-- Measure YOLO inference time
-- Measure postprocessing time
-- Measure OpenCV visualization overhead
-- Measure total pipeline processing time
+* Measure image preprocessing time (completed)
+* Measure inference time (completed)
+* Measure rendering time (completed)
+* Measure display overhead (completed)
+* Measure total pipeline latency (completed)
+* Identify dominant bottlenecks (completed)
+
+### Architecture Optimization
+
+* Investigate rendering bottlenecks (completed)
+* Evaluate display-thread separation (completed)
+* Implement threaded rendering architecture (completed)
+* Measure throughput improvements (completed)
 
 ### Benchmark Analysis
 
-- Compare FP32, FP16, ONNX, TensorRT FP16, and TensorRT INT8
-- Evaluate compression trade-offs
-- Evaluate acceleration trade-offs
-- Compare resource utilization
-- Compare prediction consistency
-- Identify dominant perception pipeline bottlenecks
+* Compare FP32, FP16, and TensorRT INT8 (completed)
+* Evaluate speed versus consistency trade-offs (completed)
+* Compare resource utilization (completed)
+* Compare latency improvements (completed)
+* Identify remaining bottlenecks (completed)
 
 ---
 
 ## Completed
 
-- PyTorch FP32 benchmarking 
-- PyTorch FP16 benchmarking 
-- ✅ ONNX export 
-- ✅ ONNX Runtime GPU configuration
-- ONNX Runtime GPU benchmarking 
-- ✅ TensorRT installation and configuration 
-- ✅ TensorRT FP16 engine export 
-- TensorRT FP16 benchmarking 
-- ✅ TensorRT INT8 calibration dataset creation
-- ✅ TensorRT INT8 engine export 
-- TensorRT INT8 benchmarking 
+### Baseline Benchmarking
+
+* ✅ PyTorch FP32 benchmarking
+* ✅ PyTorch FP16 benchmarking
+* ✅ Resource utilization analysis
+
+### Model Compression & Acceleration
+
+* ✅ ONNX export
+* ✅ ONNX Runtime GPU configuration
+* ✅ ONNX Runtime GPU evaluation
+* ✅ TensorRT installation and configuration
+* ✅ TensorRT FP16 engine export
+* ✅ TensorRT FP16 benchmarking
+* ✅ INT8 calibration dataset creation
+* ✅ TensorRT INT8 engine export
+* ✅ TensorRT INT8 benchmarking
+
+### Consistency Analysis
+
+* ✅ FP32 vs TensorRT FP16 comparison
+* ✅ FP32 vs TensorRT INT8 comparison
+* ✅ Detection agreement analysis
+* ✅ Class agreement analysis
+* ✅ Bounding-box IoU analysis
+
+### Pipeline Profiling
+
+* ✅ Preprocessing profiling
+* ✅ Inference profiling
+* ✅ Rendering profiling
+* ✅ Display profiling
+* ✅ End-to-end pipeline profiling
+
+### Architecture Optimization
+
+* ✅ Rendering bottleneck investigation
+* ✅ Display-thread evaluation
+* ✅ Threaded rendering implementation
+* ✅ Throughput optimization
 
 ---
 
@@ -338,116 +374,197 @@ Build a real-time autonomous perception pipeline using:
 
 Steady-state performance:
 
-- Min FPS: 10.14
-- Avg FPS: 14.29
-- Max FPS: 17.69
-
-### PyTorch FP16
-
-- Improved throughput over FP32
-- Reduced precision without noticeable deployment issues
-
-### ONNX Runtime GPU
-
-- Successfully deployed using ONNX Runtime GPU
-- Required manual CUDA/cuDNN configuration under WSL2
-
-### ONNX Runtime INT8
-
-- Dynamic INT8 quantization generated successfully
-- GPU execution failed due to unsupported ConvInteger operators
-- ONNX Runtime GPU was not suitable for YOLOv8-seg INT8 deployment
+* Avg FPS: 10.16
 
 ### TensorRT FP16
 
 Steady-state performance:
 
-- Min FPS: 13.89
-- Avg FPS: 17.12
-- Max FPS: 23.10
+* Avg FPS: 26.33
 
 Findings:
 
-- ~20% average FPS improvement over PyTorch FP32
-- Significant reduction in inference overhead
+* Significant throughput improvement over FP32
+* High prediction consistency retained
 
 ### TensorRT INT8
 
 Steady-state performance:
 
-- Min FPS: 13.60
-- Avg FPS: 18.42
-- Max FPS: 24.74
+* Avg FPS: 26.81
 
 Findings:
 
-- ~29% average FPS improvement over PyTorch FP32
-- ~8% average FPS improvement over TensorRT FP16
-- INT8 gains were smaller than expected, suggesting inference may no longer be the dominant bottleneck
+* Highest throughput achieved
+* Best efficiency-performance trade-off
+* Lower prediction consistency than FP16
+
+### ONNX Runtime GPU
+
+Findings:
+
+* Successfully deployed under WSL2
+* Required manual CUDA/cuDNN configuration
+* Evaluated as intermediate deployment format
+
+### ONNX Runtime INT8
+
+Findings:
+
+* Dynamic INT8 quantization generated successfully
+* GPU execution failed due to unsupported ConvInteger operators
+* Not suitable for YOLOv8-seg INT8 deployment
+
+---
 
 ### Calibration Dataset
 
-- Created calibration dataset from CARLA replay recordings
-- Randomly sampled 500 representative images
-- Successfully used for TensorRT INT8 engine generation
+Created from CARLA replay recordings.
 
-### Consistency Analysis
+Dataset:
 
-Pending.
+* 500 representative images
 
-Planned Metrics:
+Used for:
 
-- IoU
-- Precision
-- Recall
-- F1 Score
-- Detection count difference
-- Confidence score difference
+* TensorRT INT8 engine calibration
 
-### Pipeline Profiling
+---
 
-Pending.
+## Consistency Analysis
 
-Motivation:
+Dataset:
 
-TensorRT INT8 produced only a modest improvement over TensorRT FP16, suggesting additional bottlenecks may exist in:
+* 900 replay images
 
-- ROS2 callbacks
-- Image preprocessing
-- Segmentation postprocessing
-- OpenCV visualization
-- End-to-end pipeline execution
+### FP32 vs TensorRT FP16
 
-Profiling will be used to identify remaining performance bottlenecks.
+| Metric | Value |
+|----------|---------:|
+| Detection Agreement | 94.75% |
+| Class Agreement | 97.77% |
+| Mean Box IoU | 0.976 |
 
+### FP32 vs TensorRT INT8
 
-### Deliverables
+| Metric | Value |
+|----------|---------:|
+| Detection Agreement | 90.23% |
+| Class Agreement | 95.41% |
+| Mean Box IoU | 0.943 |
+
+### Key Findings
+
+* FP16 preserved predictions better than INT8
+* INT8 introduced measurable consistency loss
+* Localization quality remained high for both models
+
+---
+
+## Pipeline Profiling
+
+Dataset:
+
+* 900 replay images
+
+| Component | FP32 | FP16 | INT8 |
+|------------|---------:|---------:|---------:|
+| Preprocessing | 0.35 ms | 0.37 ms | 0.37 ms |
+| Inference | 44.94 ms | 31.55 ms | 24.79 ms |
+| Rendering | 14.27 ms | 14.72 ms | 15.90 ms |
+| Display | 4.71 ms | 4.67 ms | 4.67 ms |
+| Total Pipeline | 64.27 ms | 51.31 ms | 45.91 ms |
+
+### Key Findings
+
+* TensorRT significantly reduced inference latency
+* Rendering became a major bottleneck
+* Visualization cost became comparable to inference cost
+* Inference was no longer the sole bottleneck
+
+---
+
+## Architecture Optimization
+
+### Original Architecture
+
+Callback Thread:
+
+* Inference
+* Rendering
+* FPS Overlay
+
+Display Thread:
+
+* OpenCV Display
+
+### Optimized Architecture
+
+Callback Thread:
+
+* Inference Only
+
+Display Thread:
+
+* Rendering
+* FPS Overlay
+* OpenCV Display
+
+### Results
+
+| Model | Avg FPS |
+|---------|---------:|
+| FP32 | 10.16 |
+| TensorRT FP16 | 26.33 |
+| TensorRT INT8 | 26.81 |
+
+### Key Findings
+
+* Rendering blocked callback execution
+* Threaded rendering enabled pipeline parallelism
+* TensorRT pipelines benefited significantly from architecture optimization
+
+---
+
+## End-to-End Comparison
+
+| Configuration | Avg FPS |
+|---------------|---------:|
+| Live CARLA + ROS2 + YOLOv8m-seg | ~3.5 |
+| Replay + TensorRT INT8 | ~26 |
+
+Improvement:
+
+* Approximately 7.4× higher throughput
+
+---
+
+## Deliverables
 
 ### Performance Comparison
 
-| Precision | FPS | Inference Latency | CPU | GPU | RAM | VRAM |
-|------------|------|------------------|------|------|------|------|
-| FP32 | | | | | | |
-| FP16 | | | | | | |
-| INT8 | | | | | | |
+| Precision | Avg FPS |
+|------------|---------:|
+| FP32 | 10.16 |
+| TensorRT FP16 | 26.33 |
+| TensorRT INT8 | 26.81 |
 
 ### Consistency Comparison
 
-| Precision | IoU | Precision | Recall | F1 Score |
-|------------|------|-----------|--------|----------|
-| FP16 | | | | |
-| INT8 | | | | |
+| Precision | Detection Agreement | Class Agreement | Mean Box IoU |
+|------------|------------------:|--------------:|------------:|
+| TensorRT FP16 | 94.75% | 97.77% | 0.976 |
+| TensorRT INT8 | 90.23% | 95.41% | 0.943 |
 
 ### Pipeline Profiling
 
 | Component | Time (ms) |
-|------------|-----------|
-| ROS2 Callback | |
-| Image Preprocessing | |
-| YOLO Inference | |
-| Postprocessing | |
-| OpenCV Visualization | |
-| Total Pipeline Time | |
+|------------|----------:|
+| Preprocessing | 0.35–0.37 |
+| Inference | 24.79–44.94 |
+| Rendering | 14.27–15.90 |
+| Display | 4.67–4.71 |
+| Total Pipeline | 45.91–64.27 |
 
 
 ---
