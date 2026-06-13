@@ -67,7 +67,15 @@ Converted standalone scripts into a reusable ROS2 package architecture with laun
 
 ---
 
-### 🚧 Phase 4 — Offline Replay & Benchmarking
+### ✅ Phase 4 — Offline Replay & Benchmarking
+
+Developed a deterministic dataset generation and offline replay framework for robotics perception benchmarking. Validated synchronized recording, replay-based perception evaluation, and resource utilization analysis across online and offline perception pipelines.
+
+**Key Result:** Offline replay reduced CPU utilization from ~75% to ~30% and GPU utilization from ~60% to ~30% while maintaining perception functionality.
+
+📁 [View Phase 4](04_phase4_offline_replay_benchmarking)
+
+### 🚧 Phase 5 — ROS2 Transport Performance Investigation
 
 Documentation will be published after project milestone release.
 
