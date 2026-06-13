@@ -1,0 +1,8 @@
+camera_publisher:
+  ros__parameters:
+
+    session_dir: "/home/hamza/ros2_cv_ws/scripts/phase4/recordings/session_20260530_204754"
+
+    replay_fps: 4
+
+    topic_name: "/carla/ego_vehicle/rgb_front/image"
