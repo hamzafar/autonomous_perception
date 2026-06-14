@@ -189,7 +189,7 @@ Achieved deterministic dataset generation with zero-frame-loss validation across
 ### Online vs Offline Perception Comparison
 
 <p align="center">
-  <img src="../assets/gifs/phase4_pipeline.gif" width="700"/>
+  <img src="../assets/gifs/phase4_pipeline.gif" width="700", height="400"/>
 </p>
 
 <p align="center">
