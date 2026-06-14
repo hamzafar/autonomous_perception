@@ -188,8 +188,13 @@ Achieved deterministic dataset generation with zero-frame-loss validation across
 
 ### Online vs Offline Perception Comparison
 
-<img src="../assets/gifs/phase4_pipeline.gif" width="350" height="400"/>
-This comparison demonstrates the resource utilization differences between simulator-based perception and replay-based perception evaluation.
+<p align="center">
+  <img src="../assets/gifs/phase4_pipeline.gif" width="700"/>
+</p>
+
+<p align="center">
+  This comparison demonstrates the resource utilization differences between simulator-based perception and replay-based perception evaluation.
+</p>
 
 ---
 
