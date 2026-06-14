@@ -188,14 +188,7 @@ Achieved deterministic dataset generation with zero-frame-loss validation across
 
 ### Online vs Offline Perception Comparison
 
-**Placeholder for comparison GIF/video**
-
-```text
-Online CARLA + YOLO
-          vs
-Offline Replay + YOLO
-```
-
+<img src="../assets/gifs/phase4_pipeline.gif" width="350" height="400"/>
 This comparison demonstrates the resource utilization differences between simulator-based perception and replay-based perception evaluation.
 
 ---
