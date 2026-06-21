@@ -186,27 +186,13 @@ replay_validation/
 
 ### ROS2 Image Transport Optimization
 
-**Placeholder for throughput comparison GIF/video**
+<p align="center">
+  <img src="../assets/gifs/phase5_pipeline.gif" width="700", height="400"/>
+</p>
 
-```text
-Live CARLA Publisher
-        ↓
-      ~3 FPS
-
-Offline Replay Publisher
-        ↓
-      ~8 FPS
-
-Multi-Thread DDS Publisher
-        ↓
-     ~15 FPS
-```
-
-Overall throughput improvement:
-
-**~5× increase**
-
-from live CARLA publishing to multi-threaded DDS publishing.
+<p align="center">
+  This comparison demonstrates the throughput improvement through publisher-side parallelism.
+</p>
 
 ---
 
