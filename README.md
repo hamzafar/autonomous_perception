@@ -75,11 +75,21 @@ Developed a deterministic dataset generation and offline replay framework for ro
 
 📁 [View Phase 4](04_phase4_offline_replay_benchmarking)
 
-### 🚧 Phase 5 — ROS2 Transport Performance Investigation
+### ✅ Phase 5 — ROS2 Transport Performance Investigation
+
+Investigated DDS transport behavior, throughput limitations, QoS configurations, and publisher scalability for perception workloads. Validated replay-based benchmarking, large-payload transport, and multi-threaded publishing architectures.
+
+**Key Result:** Improved throughput from ~3 FPS (live CARLA publisher) to ~15 FPS using replay-based benchmarking and multi-threaded DDS publishing.
+
+
+📁 [View Phase 5](05_phase5_ros2_transport_performance)
+
+
+### 🚧 Phase 6 — Model Compression & Perception Optimization
 
 Documentation will be published after project milestone release.
 
-📁 [View Phase 4](04_phase4_offline_replay_benchmarking)
+📁 [View Phase 6](05_phase5_ros2_transport_performance)
 
 ---
 
@@ -88,8 +98,14 @@ Documentation will be published after project milestone release.
 | Phase 1 — CARLA + ROS2 Integration | Phase 2 — Real-Time Object Detection |
 |------------------------------------|--------------------------------------|
 | <img src="assets/gifs/phase1_pipeline.gif" width="350" height="200"/> | <img src="assets/gifs/phase2_pipeline.gif" width="350" height="200"/> |
-| <img src="assets/gifs/phase4_pipeline.gif" width="350" height="200"/> |
 | End-to-end CARLA → ROS2 → OpenCV pipeline validation | Real-time object detection using YOLOv8 and ROS2 |
+
+| Phase 4 —  Offline Replay & Benchmarking | Phase 5 —  ROS2 Transport Performance Investigation |
+|------------------------------------|--------------------------------------|
+| <img src="assets/gifs/phase4_pipeline.gif" width="350" height="200"/> |  <img src="assets/gifs/phase5_pipeline.gif" width="350" height="200"/> |
+| Deterministic offline replay and perception benchmarking | Multi-threaded DDS throughput scaling |
+
+
 ---
 
 
