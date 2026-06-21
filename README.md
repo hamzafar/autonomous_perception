@@ -102,7 +102,7 @@ Documentation will be published after project milestone release.
 
 | Phase 4 —  Offline Replay & Benchmarking | Phase 5 —  ROS2 Transport Performance Investigation |
 |------------------------------------|--------------------------------------|
-| <img src="assets/gifs/phase4_pipeline.gif" width="350" height="200"/> |  <img src="assets/gifs/phase5_pipeline.gif" width="350" height="200"/> |
+| <img src="assets/gifs/phase4_pipeline.gif" width="350" height="400"/> |  <img src="assets/gifs/phase5_pipeline.gif" width="350" height="400"/> |
 | Deterministic offline replay and perception benchmarking | Multi-threaded DDS throughput scaling |
 
 
