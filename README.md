@@ -85,11 +85,14 @@ Investigated DDS transport behavior, throughput limitations, QoS configurations,
 📁 [View Phase 5](05_phase5_ros2_transport_performance)
 
 
-### 🚧 Phase 6 — Model Compression & Perception Optimization
+### ✅  Phase 6 — Model Compression & Perception Optimization
 
-Documentation will be published after project milestone release.
+Optimized the perception pipeline through TensorRT acceleration, prediction consistency analysis, pipeline profiling, and architecture optimization. Benchmarked FP32, FP16, and INT8 inference while identifying rendering bottlenecks and improving end-to-end perception throughput.
 
-📁 [View Phase 6](05_phase5_ros2_transport_performance)
+**Key Result:** Increased end-to-end perception performance from ~3.5 FPS to ~26 FPS (approximately **7.4× improvement**) while maintaining high prediction consistency.
+
+
+📁 [View Phase 6](06_phase6_perception_optimization)
 
 ---
 
