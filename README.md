@@ -108,10 +108,15 @@ Optimized the perception pipeline through TensorRT acceleration, prediction cons
 | <img src="assets/gifs/phase4_pipeline.gif" width="350" height="400"/> |  <img src="assets/gifs/phase5_pipeline.gif" width="350" height="400"/> |
 | Deterministic offline replay and perception benchmarking | Multi-threaded DDS throughput scaling |
 
-| Phase 6 —  Model Compression & Perception Optimization| 
-|------------------------------------|
-| <img src="assets/gifs/phase6_pipeline.gif" width="350" height="400"/> |  
-| TensorRT optimization, pipeline profiling, and end-to-end perception acceleration |
+<h4 align="center">Phase 6 — Model Compression & Perception Optimization</h4>
+
+<p align="center">
+  <img src="assets/gifs/phase6_pipeline.gif" width="480"  height="400"/>
+</p>
+
+<p align="center">
+TensorRT optimization, pipeline profiling, and end-to-end perception acceleration.
+</p>
 
 
 ---
