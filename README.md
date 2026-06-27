@@ -105,6 +105,11 @@ Documentation will be published after project milestone release.
 | <img src="assets/gifs/phase4_pipeline.gif" width="350" height="400"/> |  <img src="assets/gifs/phase5_pipeline.gif" width="350" height="400"/> |
 | Deterministic offline replay and perception benchmarking | Multi-threaded DDS throughput scaling |
 
+| Phase 6 —  Model Compression & Perception Optimization| 
+|------------------------------------|
+| <img src="assets/gifs/phase6_pipeline.gif" width="350" height="400"/> |  
+| TensorRT optimization, pipeline profiling, and end-to-end perception acceleration |
+
 
 ---
 
@@ -113,11 +118,12 @@ Documentation will be published after project milestone release.
 
 Planned areas of development include:
 
-- Network profiling and communication analysis
 - Sensor synchronization
 - Multi-camera perception
 - 3D perception workflows
 - Sensor fusion
+- Distance Estimation
+- Bird's Eye View (BEV)
 - Autonomous systems engineering workflows
 
 ---

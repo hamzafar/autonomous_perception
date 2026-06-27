@@ -189,7 +189,14 @@ Overall throughput improvement:
 
 ### Model Compression & Pipeline Optimization
 
-**Placeholder for performance comparison GIF/video**
+<p align="center">
+  <img src="../assets/gifs/phase6_pipeline.gif" width="700", height="400"/>
+</p>
+
+<p align="center">
+  Overall Performance Improvement: Live CARLA vs Optimized Pipeline
+</p>
+
 
 ```text
 PyTorch FP32
