@@ -2,8 +2,7 @@
 
 A robotics perception engineering project documenting the transition from traditional 2D computer vision to ROS2-based autonomous perception systems.
 
-Built using CARLA, ROS2, OpenCV, and YOLOv8, the project progresses through a series of engineering phases covering simulator integration, perception pipelines, modular ROS2 architectures, and system validation workflows.
-
+Built using CARLA, ROS2, OpenCV, and YOLOv8, the project progresses through a series of engineering phases covering simulator integration, perception pipelines, modular ROS2 architectures, system benchmarking, and performance optimization.
 
 ---
 
