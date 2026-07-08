@@ -14,10 +14,12 @@ Built using CARLA, ROS2, OpenCV, and YOLOv8, the project progresses through a se
 | Simulation | CARLA 0.9.15 |
 | Robotics Middleware | ROS2 Humble |
 | Computer Vision | OpenCV |
-| Object Detection | YOLOv8 |
+| Object Detection & Segmentation | YOLOv8 |
 | Programming Language | Python |
 | Communication | CycloneDDS |
+|  Model Optimization | ONNX Runtime, TensorRT |
 | Environment | Windows 11 + WSL2 Ubuntu 22.04 |
+
 
 ---
 
