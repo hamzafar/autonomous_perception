@@ -33,10 +33,13 @@ ROS2 Communication Layer
 Perception Pipeline
         │
         ▼
-Modular ROS2 Architecture
+Hardware, Network & System Profiling
         │
         ▼
-Validation & Benchmarking
+Replay-Based Benchmarking
+        │
+        ▼
+Quantization & Pipeline Optimization
 ```
 
 ---
