@@ -75,16 +75,11 @@ Converted standalone scripts into a reusable ROS2 package architecture with laun
 
 Developed a deterministic dataset generation and offline replay framework for robotics perception benchmarking. Validated synchronized recording, replay-based perception evaluation, and resource utilization analysis across online and offline perception pipelines.
 
-**Key Result:** Offline replay reduced CPU utilization from ~75% to ~30% and GPU utilization from ~60% to ~30% while maintaining perception functionality.
-
 📁 [View Phase 4](04_phase4_offline_replay_benchmarking)
 
 ### ✅ Phase 5 — ROS2 Transport Performance Investigation
 
 Investigated DDS transport behavior, throughput limitations, QoS configurations, and publisher scalability for perception workloads. Validated replay-based benchmarking, large-payload transport, and multi-threaded publishing architectures.
-
-**Key Result:** Improved throughput from ~3 FPS (live CARLA publisher) to ~15 FPS using replay-based benchmarking and multi-threaded DDS publishing.
-
 
 📁 [View Phase 5](05_phase5_ros2_transport_performance)
 
@@ -92,9 +87,6 @@ Investigated DDS transport behavior, throughput limitations, QoS configurations,
 ### ✅  Phase 6 — Model Compression & Perception Optimization
 
 Optimized the perception pipeline through TensorRT acceleration, prediction consistency analysis, pipeline profiling, and architecture optimization. Benchmarked FP32, FP16, and INT8 inference while identifying rendering bottlenecks and improving end-to-end perception throughput.
-
-**Key Result:** Increased end-to-end perception performance from ~3.5 FPS to ~26 FPS (approximately **7.4× improvement**) while maintaining high prediction consistency.
-
 
 📁 [View Phase 6](06_phase6_perception_optimization)
 
