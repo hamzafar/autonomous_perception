@@ -121,6 +121,23 @@ TensorRT optimization, pipeline profiling, and end-to-end perception acceleratio
 
 ---
 
+## Key Performance Results
+
+| Engineering Milestone | Result |
+|-----------------------|--------|
+| Offline Replay (Phase 4) | CPU utilization reduced from **~75% → ~30%** |
+| Offline Replay (Phase 4) | GPU utilization reduced from **~60% → ~30%** |
+| ROS2 Transport (Phase 5) | Live CARLA publisher: **~3 FPS** |
+| ROS2 Transport (Phase 5) | Multi-threaded DDS publisher: **~15 FPS** |
+| Model Optimization (Phase 6) | TensorRT FP32 → INT8: **~3.5 FPS → ~26 FPS** |
+| Overall Improvement | **~7.4× end-to-end perception throughput** |
+
+
+**Additional Validation**
+
+- TensorRT FP16 preserved high prediction consistency (**94.75% detection agreement**, **97.77% class agreement**, **0.976 mean Box IoU**) compared with the FP32 baseline.
+
+---
 
 ## Future Work
 
